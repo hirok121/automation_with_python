@@ -203,7 +203,7 @@ def removeComments():
     verbose.append(f'Removed {counter} single line comments')
     # remove multi line comments
     contents="".join(lines)
-    pattern = r"{}.*?{}".format(comment_char1,comment_char2)
+    pattern = r"{}[\s\S]*{}".format(comment_char1,comment_char2)
     contents=re.sub(pattern, "", contents, flags=re.DOTALL)
     with open(path, 'w') as file:
         file.write(contents)
