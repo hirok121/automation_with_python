@@ -9,12 +9,14 @@ test.py
 c.cpp
 test.*
 text.*
+temp*
+
 
 
 
 # C extensions
 *.so
-# venv
+venv
 .venvL/
 # Distribution / packaging
 .Python
